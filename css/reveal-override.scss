@@ -19,8 +19,8 @@
         /* Blow image up to full screen size */
         height: auto;
         width: 100%;
-        max-width: 80%;
-        max-height: 80%;
+        max-width: 100%;
+        max-height: 100%;
         margin: 2%;
     }
 
@@ -92,12 +92,12 @@
     }
 
     a {
-        font-family: "Special Elite", monospace !important;
+        font-family: "Source Code Pro", monospace !important;
         white-space: nowrap;
     }
 
     code {
-        font-family: "Special Elite", monospace !important;
+        font-family: "Source Code Pro", monospace !important;
         color: black !important;
         text-shadow: none;
         text-transform: none;
