@@ -10,3 +10,6 @@
 [submodule "highlight.js"]
 	path = highlight.js
 	url = https://github.com/isagalaev/highlight.js
+[submodule "reveal.js-plugins"]
+	path = reveal.js-plugins
+	url = https://github.com/dalgaaf/reveal.js-plugins
