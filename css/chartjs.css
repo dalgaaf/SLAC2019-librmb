@@ -1,0 +1,9 @@
+.doughnut-reveal {
+  max-width: 15em;
+  max-height: 15em;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, 0%)
+}
