@@ -1,11 +1,11 @@
-# Title
-
-Subtitle or catchy tagline
+```bash
+echo “Subject: Update on librmb” | sendmail -v SDS@ceph.com
+```
 
 * * *
 
-Speaker Name | [@speaker](https://twitter.com/speaker)
+Danny Al-Gaaf | [@dannyalgaaf](https://twitter.com/dannyalgaaf)
 
-Event | Date
+Cephalocon Barcelona | May 20th 2019
 
 Note: Add introductory slides here.
