@@ -1,9 +1,13 @@
 @import url(fonts.css);
 
+body {
+    color: #555555 !important;
+}
+
 .reveal {
     font-family: "Open Sans Condensed", sans-serif;
     font-weight: normal;
-    color: #555555;
+    color: #555555 !important;
 
     strong {
       color: black;
@@ -29,6 +33,13 @@
         th, td {
             color: white;
         }
+    }
+
+    table, th, td {
+       border: 0px !important;
+       border-bottom: 0px !important;
+       margin: 0px;
+       padding: 0em 0.1em 0.1em 0em !important;
     }
 
     /* Blow iframe up to full screen size */
@@ -92,12 +103,14 @@
     }
 
     a {
-        font-family: "Source Code Pro", monospace !important;
+        font-family: "Special Elite" !important;
+        //font-family: "Source Code Pro", monospace !important;
         white-space: nowrap;
     }
 
     code {
-        font-family: "Source Code Pro", monospace !important;
+        font-family: "Special Elite" !important;
+        //font-family: "Source Code Pro", monospace !important;
         color: black !important;
         text-shadow: none;
         text-transform: none;

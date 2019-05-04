@@ -1,9 +1,13 @@
 @charset "UTF-8";
 @import url(fonts.css);
+body {
+  color: #555555 !important;
+}
+
 .reveal {
   font-family: "Open Sans Condensed", sans-serif;
   font-weight: normal;
-  color: #555555;
+  color: #555555 !important;
   /* Make sure keyboard shortcuts help is visible */
   /* Blow iframe up to full screen size */
 }
@@ -25,6 +29,12 @@
 }
 .reveal .overlay-help .viewport th, .reveal .overlay-help .viewport td {
   color: white;
+}
+.reveal table, .reveal th, .reveal td {
+  border: 0px !important;
+  border-bottom: 0px !important;
+  margin: 0px;
+  padding: 0em 0.1em 0.1em 0em !important;
 }
 .reveal iframe {
   height: 90%;
@@ -69,11 +79,11 @@
   border-left-color: black;
 }
 .reveal a {
-  font-family: "Source Code Pro", monospace !important;
+  font-family: "Special Elite" !important;
   white-space: nowrap;
 }
 .reveal code {
-  font-family: "Source Code Pro", monospace !important;
+  font-family: "Special Elite" !important;
   color: black !important;
   text-shadow: none;
   text-transform: none;
