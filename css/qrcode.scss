@@ -1,4 +1,5 @@
 .qrcode {
+    text-align: center !important;
     img {
         /* Override "block" display which qrcode.js sets by default, to allow
            proper centering */
@@ -8,6 +9,6 @@
         margin-left: auto;
         margin-right: auto;
         background-color: white !important;
-        padding: 0.5em;
+        padding: 1em;
     }
 }
