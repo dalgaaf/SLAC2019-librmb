@@ -136,9 +136,9 @@ body {
 }
 .reveal pre {
   box-shadow: none;
-  padding: 13px 13px;
+  padding: 5px 5px;
   background-color: #ededed;
-  max-width: 80%;
+  max-width: 90%;
 }
 .reveal pre code {
   font-family: "Source Code Pro", monospace !important;

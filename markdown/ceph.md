@@ -2,12 +2,6 @@
 # Ceph
 
 
-<!-- .slide: data-state="normal" id="ceph-overview" data-timing="20s" data-menu-title="Ceph Components" -->
-<center><img src="images/ceph-stack.svg" style="width:80%"></center>
-
-NOTE: well known picture, short info on components
-
-
 <!-- .slide: data-state="normal" id="ceph-store-emails-2" data-timing="20s" data-menu-title="Ceph: Option CephFS" -->
 ## Where to store in Ceph?
 
@@ -18,16 +12,19 @@ NOTE: well known picture, short info on components
 
 ### CephFS
 
-* same issues as NFS <!-- .element class="fragment" -->
-* mail storage on POSIX layer adds complexity <!-- .element class="fragment" -->
-* no option for emails <!-- .element class="fragment" -->
+* POSIX layer adds complexity <!-- .element class="fragment" -->
+* suffers from similar issues as NFS <!-- .element class="fragment" -->
+* no significant advantage for mail storage <!-- .element class="fragment" -->
 * usable for metadata/caches/indexes <!-- .element class="fragment" -->
 <br>
 <br>
 
-#### <b>Security</b> <!-- .element class="fragment" -->
+### Security <!-- .element class="fragment" -->
 * requires direct access to storage network <!-- .element class="fragment" -->
 * only for dedicated platform <!-- .element class="fragment" -->
+
+Note:
+- there is no significant advantage to NFS especially with cost and effort to switch from well working systems.
 
 
 <!-- .slide: data-state="normal" id="ceph-store-emails-3" data-timing="20s" data-menu-title="Ceph: Option RBD" -->
@@ -48,7 +45,7 @@ NOTE: well known picture, short info on components
 <br>
 <br>
 
-#### <b>Security</b> <!-- .element class="fragment" -->
+### Security <!-- .element class="fragment" -->
 * no direct access to storage network required <!-- .element class="fragment" -->
 * secure through hypervisor abstraction (libvirt) <!-- .element class="fragment" -->
 
