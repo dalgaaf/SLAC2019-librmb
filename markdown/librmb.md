@@ -12,13 +12,16 @@
 
 ### Open source project (LGPL 2.1, MIT) <!-- .element class="fragment" data-fragment-index="0"-->
 
-### 72% market share (openemailsurvey.org, 02/2017) <!-- .element class="fragment" data-fragment-index="1"-->
+### 76% market share (openemailsurvey.org, 2019) <!-- .element class="fragment" data-fragment-index="1"-->
 
 ### Objectstore plugin available (obox) <!-- .element class="fragment" data-fragment-index="2"-->
 * supports only REST APIs like S3/Swift <!-- .element class="fragment" data-fragment-index="3"-->
 * not open source <!-- .element class="fragment" data-fragment-index="4"-->
 * requires Dovecot Pro licence <!-- .element class="fragment" data-fragment-index="5"-->
   * large impact on TCO <!-- .element class="fragment" data-fragment-index="5"-->
+
+Note: 
+- openemailsurvey: 3.4m IMAP server scanned via shodan, +4% since 2017.
 
 
 <!-- .slide: data-state="normal" id="dovecot-obox" data-timing="20s" data-menu-title="Dovecot obox" -->
