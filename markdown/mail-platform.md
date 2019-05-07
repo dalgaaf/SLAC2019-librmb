@@ -8,12 +8,16 @@
 * DT's mail platform for customers <!-- .element class="fragment" data-fragment-index="1"-->
   * includes also voice mail files <!-- .element class="fragment" data-fragment-index="1"-->
 * dovecot <!-- .element class="fragment" data-fragment-index="2"-->
+  * LGPL 2.1, MIT <!-- .element class="fragment" data-fragment-index="2"-->
+  * 76% market share (openemailsurvey.org, 2019) <!-- .element class="fragment" data-fragment-index="2"-->
 * NAS with sharded NFS <!-- .element class="fragment" data-fragment-index="3"-->
+
+### Dimensions <!-- .element class="fragment" data-fragment-index="5"-->
 * ~39 million accounts <!-- .element class="fragment" data-fragment-index="5"-->
 * ~1.3 petabyte net storage <!-- .element class="fragment" data-fragment-index="6"-->
-  * ~6.7 billion emails <!-- .element class="fragment" data-fragment-index="7"-->
-  * ~1.2 billion index/cache/metadata files <!-- .element class="fragment" data-fragment-index="8"-->
-  * ~42% usable raw space <!-- .element class="fragment" data-fragment-index="9"-->
+* ~42% usable raw space <!-- .element class="fragment" data-fragment-index="7"-->
+* ~6.7 billion emails <!-- .element class="fragment" data-fragment-index="8"-->
+* ~1.2 billion index/cache/metadata files <!-- .element class="fragment" data-fragment-index="9"-->
 
 Note: 
 - NFS with multiple RAID arrays
@@ -321,6 +325,9 @@ Note: emails over 50m very likely via IMAP, never sent
 -->
 </canvas>
 
+Note: 
+- TODO fix colors
+
 
 <!-- .slide: data-state="normal" id="store-emails" data-timing="20s" data-menu-title="How stored?" -->
 ## How are emails stored?
@@ -345,6 +352,7 @@ Note:
   * protocol (IMAP vs POP3) <!-- .element class="fragment" data-fragment-index="0"-->
   * user frontend (mailer vs webmailer) <!-- .element class="fragment" data-fragment-index="0"-->
   * mail server implementation <!-- .element class="fragment" data-fragment-index="0"-->
+
 * storage type depends on: <!-- .element class="fragment" data-fragment-index="1"-->
   * sync between workers <!-- .element class="fragment" data-fragment-index="1"-->
   * plugins <!-- .element class="fragment" data-fragment-index="1"-->
@@ -354,7 +362,9 @@ Note: TODO: refine
 
 
 <!-- .slide: data-state="normal" id="project-motivation" data-timing="20s" data-menu-title="Project Motivation" -->
-## Motivation
+## Objectives
+
+### Explore new storage technologies
 
 * faster and automatic self healing <!-- .element class="fragment" data-fragment-index="1"-->
 * less IO overhead <!-- .element class="fragment" data-fragment-index="2"-->
