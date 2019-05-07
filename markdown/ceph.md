@@ -37,8 +37,9 @@ Note:
 
 ### RBD
 
-* needs sharding and large RBDs <!-- .element class="fragment" -->
-* needs account migration and RBD/fs extend scenarios <!-- .element class="fragment" -->
+* sharding and large RBDs <!-- .element class="fragment" -->
+  * account migration <!-- .element class="fragment" -->
+  * RBD/fs extend scenarios <!-- .element class="fragment" -->
 * still includes POSIX layer like NFS <!-- .element class="fragment" -->
 * no sharing between clients <!-- .element class="fragment" -->
 * impracticable <!-- .element class="fragment" -->
@@ -59,7 +60,8 @@ Note:
 </div>
 
 ### RadosGW
-* can store emails as objects <!-- .element class="fragment" -->
+* store emails as objects <!-- .element class="fragment" -->
+* additional server/service <!-- .element class="fragment" --> 
 * extra network hops <!-- .element class="fragment" -->
 * potential bottleneck <!-- .element class="fragment" -->
 * very likely not fast enough <!-- .element class="fragment" -->
@@ -82,7 +84,7 @@ Note:
 ### Librados
 * direct access to RADOS <!-- .element class="fragment" -->
 * parallel I/O <!-- .element class="fragment" -->
-* not optimized for emails <!-- .element class="fragment" -->
+* not optimized for email use case<!-- .element class="fragment" -->
 * how to handle metadata/caches/indexes? <!-- .element class="fragment" -->
 <br>
 <br>
