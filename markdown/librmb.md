@@ -2,39 +2,6 @@
 # Dovecot and Ceph
 
 
-<!-- .slide: data-state="normal" id="librmb-dovecot" data-timing="20s" data-menu-title="Dovecot" -->
-## Dovecot
-
-<div>
-    <img style="height: 20%; left: 30%; position: absolute" alt="Dovecot Logo"
-         data-src="images/dovecot_logo.svg" />
-</div>
-
-### Open source project (LGPL 2.1, MIT) <!-- .element class="fragment" data-fragment-index="0"-->
-
-### 76% market share (openemailsurvey.org, 2019) <!-- .element class="fragment" data-fragment-index="1"-->
-
-### Objectstore plugin available (obox) <!-- .element class="fragment" data-fragment-index="2"-->
-* supports only REST APIs like S3/Swift <!-- .element class="fragment" data-fragment-index="3"-->
-* not open source <!-- .element class="fragment" data-fragment-index="4"-->
-* requires Dovecot Pro licence <!-- .element class="fragment" data-fragment-index="5"-->
-  * large impact on TCO <!-- .element class="fragment" data-fragment-index="5"-->
-
-Note: 
-- openemailsurvey: 3.4m IMAP server scanned via shodan, +4% since 2017.
-
-
-<!-- .slide: data-state="normal" id="dovecot-obox" data-timing="20s" data-menu-title="Dovecot obox" -->
-## Dovecot Pro obox Plugin
-
-<div>
-     <img style="width:90%" alt="obox architecture overview"
-          data-src="images/dovecot-obox-plugin-architecture-normal.svg" />
-</div>
-
-Note: quite complex setup with many layers of caches
-
-
 <!-- .slide: data-state="normal" id="librmb-DT" data-timing="20s" data-menu-title="DT's approach" -->
 ## DT's approach
 <div>
@@ -43,13 +10,16 @@ Note: quite complex setup with many layers of caches
 </div> <!-- .element class="fragment" data-fragment-index="4"-->
 
 * no open source solution on the market <!-- .element class="fragment" data-fragment-index="0"-->
-* closed source is no option <!-- .element class="fragment" data-fragment-index="1"-->
+* closed source or licence no option <!-- .element class="fragment" data-fragment-index="1"-->
 * develop / sponsor a solution <!-- .element class="fragment" data-fragment-index="2"-->
 * open source it <!-- .element class="fragment" data-fragment-index="3"-->
 * partner with: <!-- .element class="fragment" data-fragment-index="4"-->
   * `Wido den Hollander (42on.com)` <!-- .element class="fragment" data-fragment-index="4"-->
   * `Tallence AG` for development <!-- .element class="fragment" data-fragment-index="4"-->
   * `SUSE` for Ceph <!-- .element class="fragment" data-fragment-index="4"-->
+
+Note: 
+- Dovecot Pro licence no option due to TCO impact. Model is to pay per account if active or inactive. With 39m accounts it would break the BC.
 
 
 <!-- .slide: data-state="normal" id="librmb-DT-1" data-timing="20s" data-menu-title="Ceph Dovecot Plugin" -->
@@ -64,7 +34,7 @@ Note: quite complex setup with many layers of caches
 
 ### Generic email abstraction on top of librados <!-- .element class="fragment" data-fragment-index="4"-->
 * Split code into libraries <!-- .element class="fragment" data-fragment-index="4"-->
-* Integrate into corresponding upstream projects <!-- .element class="fragment" data-fragment-index="4"-->
+* Give code back to corresponding upstream projects <!-- .element class="fragment" data-fragment-index="4"-->
 
 Note: out of scope - user data and credential storage; full text search
 
@@ -140,7 +110,7 @@ NOTE: alternative - "rados -p rados_mail --all ls"; "for i in `rados -p rados_ma
 ## It's open source!
 
 <div>
-    <img style="position: absolute; width: 40%; left: 50%;" alt="Github Project Screenshot"
+    <img style="position: absolute; width: 65%; left: 45%;" alt="Github Project Screenshot"
          data-src="images/github-ceph-dovecot_new.png" />
 </div> <!-- .element: class="fragment" data-fragment-index="2" -->
 
@@ -148,17 +118,15 @@ NOTE: alternative - "rados -p rados_mail --all ls"; "for i in `rados -p rados_ma
 
 ### <span>Language: `C++`</span> <!-- .element: class="fragment" data-fragment-index="1" -->
 
-### <span>Location: <a href="https://github.com/ceph-dovecot/">github.com/ceph-dovecot/</a></span> <!-- .element: class="fragment" data-fragment-index="2" -->
-
-<span class="fragment" data-fragment-index="3">
-### Supported Dovecot versions: <!-- .element: class="fragment" data-fragment-index="3" -->
-* 2.2 >= 2.2.21 <!-- .element: class="fragment" data-fragment-index="3" -->
-* 2.3 <!-- .element: class="fragment" data-fragment-index="3" -->
+<span class="fragment" data-fragment-index="2">
+### Supported Dovecot versions: <!-- .element: class="fragment" data-fragment-index="2" -->
+* 2.2 >= 2.2.21 <!-- .element: class="fragment" data-fragment-index="2" -->
+* 2.3 <!-- .element: class="fragment" data-fragment-index="2" -->
 </span>
 
-### still under development <!-- .element: class="fragment" data-fragment-index="4" -->
+### <span><a href="https://github.com/ceph-dovecot/">github.com/ceph-dovecot/</a></span> <!-- .element: class="fragment" data-fragment-index="3" -->
 
-### <span>initial SLES12-SP3 and openSUSE RPMs: https://goo.gl/FymRhu</span> <!-- .element: class="fragment" data-fragment-index="5" -->
+### still under development <!-- .element: class="fragment" data-fragment-index="4" -->
 
 
 <!-- .slide: data-state="normal" id="ceph-version" data-timing="20s" data-menu-title="Ceph version" -->
