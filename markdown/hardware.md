@@ -2,27 +2,16 @@
 # Hardware
 
 
-<!-- .slide: data-state="normal" id="hardware-0" data-timing="20s" data-menu-title="Hardware" -->
-## Commodity x86_64 server
-<div>
-     <img style="position: absolute; width: 35%; left: 55%; " alt="librmb architecture overview"
-          data-src="images/HPE-DL380Gen9.jpg" />
-</div>
-* <!-- .element: class="fragment" data-fragment-index="1" --> HPE ProLiant DL380 Gen9/10
-* <!-- .element: class="fragment" data-fragment-index="2" --> Dual Socket
-  * <!-- .element: class="fragment" data-fragment-index="2" --> Intel Xeon® E5 V4
-* <!-- .element: class="fragment" data-fragment-index="3" --> 2x Intel® X710-DA2 Dual-port 10G
-  * <!-- .element: class="fragment" data-fragment-index="4" --> 40G in total
-* <!-- .element: class="fragment" data-fragment-index="5" --> 2x boot SATA SSDs
-* <!-- .element: class="fragment" data-fragment-index="6" --> HBA, no seprate RAID controller
-
-
 <!-- .slide: data-state="normal" id="hardware-1" data-timing="20s" data-menu-title="Hardware Server specs" -->
 ## Commodity x86_64 server
 <div>
-     <img style="position: absolute; width: 35%; left: 55%; " alt="librmb architecture overview"
+     <img style="position: absolute; width: 35%; left: 60%; " alt="librmb architecture overview"
           data-src="images/HPE-DL380Gen9.jpg" />
 </div>
+
+* <!-- .element: class="fragment" data-fragment-index="1" --> HPE ProLiant DL380 Gen10
+* <!-- .element: class="fragment" data-fragment-index="3" --> 2x Dual-port 10G, SSD for boot, HBA only
+
 ### CephFS Nodes (MDS, OSDs) <!-- .element: class="fragment" data-fragment-index="0" -->
 * <!-- .element: class="fragment" data-fragment-index="1" --> <b>CPU:</b> 2x E5-2643v4 @ 3.4 GHz, 6 Cores, turbo 3.7GHz
 * <!-- .element: class="fragment" data-fragment-index="1" --> <b>RAM:</b> 256 GByte, DDR4, ECC
@@ -38,7 +27,7 @@
 <!-- .slide: data-state="normal" id="hardware-3" data-timing="20s" data-menu-title="Hardware specs" -->
 ## Why this specific HW?
 
-### Community recommendations? <!-- .element: class="fragment" data-fragment-index="0" -->
+### Community min. recommendations? <!-- .element: class="fragment" data-fragment-index="0" -->
 * <!-- .element: class="fragment" data-fragment-index="0" --> OSD: 1x 64-bit AMD-64, 1GB RAM/1TB of storage, 2x 1GBit NICs
 * <!-- .element: class="fragment" data-fragment-index="0" --> MDS: 1x 64-bit AMD-64 quad-core, 1 GB RAM minimum per MDS, 2x 1GBit NICs
 

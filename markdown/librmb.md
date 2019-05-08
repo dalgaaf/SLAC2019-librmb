@@ -27,7 +27,7 @@ Note:
 ### First Step: hybrid approach <!-- .element class="fragment" data-fragment-index="0"-->
 
 ### Emails <!-- .element class="fragment" data-fragment-index="1"-->
-* RADOS Cluster <!-- .element class="fragment" data-fragment-index="1"-->
+* RADOS <!-- .element class="fragment" data-fragment-index="1"-->
 
 ### Metadata and indexes <!-- .element class="fragment" data-fragment-index="2"-->
 * CephFS <!-- .element class="fragment" data-fragment-index="2"-->
@@ -103,7 +103,7 @@ NOTE: alternative - "rados -p rados_mail --all ls"; "for i in `rados -p rados_ma
  * `shared/<key>`
  * `priv/<key>`
 
-### used by Dovecot to store metadata, quota, ...
+### to store metadata, quota, ...
 
 
 <!-- .slide: data-state="normal" id="librmb-DT-3" data-timing="20s" data-menu-title="librmb" -->
@@ -130,7 +130,7 @@ NOTE: alternative - "rados -p rados_mail --all ls"; "for i in `rados -p rados_ma
 
 
 <!-- .slide: data-state="normal" id="ceph-version" data-timing="20s" data-menu-title="Ceph version" -->
-## Which Ceph Release?
+## Which minimum Ceph Release?
 
 <div>
      <img style="width: 60%; left: 47%; position: absolute" alt="ceph luminous"
@@ -141,14 +141,12 @@ NOTE: alternative - "rados -p rados_mail --all ls"; "for i in `rados -p rados_ma
 
 * <!-- .element: class="fragment" data-fragment-index="1" --> Bluestore
   * <!-- .element: class="fragment" data-fragment-index="1" --> write performance is critical
-  * <!-- .element: class="fragment" data-fragment-index="1" --> should be at least 2x faster than filestore
 * <!-- .element: class="fragment" data-fragment-index="2" --> CephFS
-  * <!-- .element: class="fragment" data-fragment-index="2" --> Stable release
   * <!-- .element: class="fragment" data-fragment-index="2" --> Multi-MDS
 * <!-- .element: class="fragment" data-fragment-index="3" --> Erasure coding
-  * <!-- .element: class="fragment" data-fragment-index="3" --> Cost reduction
-* <!-- .element: class="fragment" data-fragment-index="4" --> Resiliency, reliability and fault tolerance
 
-### Enterprise products used: <!-- .element: class="fragment" data-fragment-index="6" -->
-* <!-- .element: class="fragment" data-fragment-index="6" --> SES 5, SLES 12-SP3
+### Enterprise currently products used: <!-- .element: class="fragment" data-fragment-index="6" -->
+* <!-- .element: class="fragment" data-fragment-index="6" --> SES 5.5, SLES 12-SP3
 
+Note:
+- Target for PoC is SES 6 based on Nautilus
