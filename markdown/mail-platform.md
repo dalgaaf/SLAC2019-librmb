@@ -34,17 +34,17 @@ Note:
 
      "datasets": [
          {
-	     "data": [9, 227, 80, 356, 157, 140, 16, 28, 0.007, 0.001],
-	     "backgroundColor": [
-	     	"rgba(166, 206, 227, 0.3)",
-		"rgba(31, 120, 180, 0.3)",
-		"rgba(178, 223, 138, 0.3)",
-		"rgba(51, 160, 44, 0.3)",
-		"rgba(251, 154, 153, 0.3)",
-		"rgba(227, 26, 28, 0.3)",
-		"rgba(253, 191, 111, 0.3)",
-		"rgba(255, 127, 0, 0.3)",
-		"rgba(202, 178, 214, 0.3)"]
+             "data": [9, 227, 80, 356, 157, 140, 16, 28, 0.007, 0.001],
+             "backgroundColor": [
+                 "rgba(166, 206, 227, 0.3)",
+                 "rgba(31, 120, 180, 0.3)",
+                 "rgba(178, 223, 138, 0.3)",
+                 "rgba(51, 160, 44, 0.3)",
+                 "rgba(251, 154, 153, 0.3)",
+                 "rgba(227, 26, 28, 0.3)",
+                 "rgba(253, 191, 111, 0.3)",
+                 "rgba(255, 127, 0, 0.3)",
+                 "rgba(202, 178, 214, 0.3)"]
          }
      ]
  },
@@ -55,31 +55,31 @@ Note:
            "display": 0
      },
      "plugins": {
-     	"datalabels": {
-	   "align": "end",
-	   "anchor": "end",
-	   "display": 1
-	}
+         "datalabels": {
+             "align": "end",
+             "anchor": "end",
+             "display": 1
+         }
      },
      "scales": {
-            "yAxes": [{
-	    	"gridLines": {
-                    "color": "rgba(0, 0, 0, 0)"
-            	},
-                "ticks": {
-                    "display": 0
-                },
-		"scaleLabel": {
-       		    "display": 1,
-        	    "labelString": "number of emails in million"
-      		}
-            }],
-            "xAxes": [{
-	    	"gridLines": {
-                    "color": "rgba(0, 0, 0, 0)"
-            	}
-            }]
-        }
+         "yAxes": [{
+             "gridLines": {
+                 "color": "rgba(0, 0, 0, 0)"
+             },
+             "ticks": {
+                 "display": 0
+             },
+             "scaleLabel": {
+                 "display": 1,
+                 "labelString": "number of emails in million"
+             }
+         }],
+         "xAxes": [{
+             "gridLines": {
+                 "color": "rgba(0, 0, 0, 0)"
+             }
+         }]
+    }
  }
 }
 -->
@@ -98,16 +98,16 @@ Note: emails over 50m very likely via IMAP, never sent
      "datasets": [
          {
              "data": [28, 20, 15, 13, 8, 5, 3, 2, 1],
-	     "backgroundColor": [
-	     	"rgba(166, 206, 227, 0.3)",
-		"rgba(31, 120, 180, 0.3)",
-		"rgba(178, 223, 138, 0.3)",
-		"rgba(51, 160, 44, 0.3)",
-		"rgba(251, 154, 153, 0.3)",
-		"rgba(227, 26, 28, 0.3)",
-		"rgba(253, 191, 111, 0.3)",
-		"rgba(255, 127, 0, 0.3)",
-		"rgba(202, 178, 214, 0.3)"]
+             "backgroundColor": [
+                 "rgba(166, 206, 227, 0.3)",
+                 "rgba(31, 120, 180, 0.3)",
+                 "rgba(178, 223, 138, 0.3)",
+                 "rgba(51, 160, 44, 0.3)",
+                 "rgba(251, 154, 153, 0.3)",
+                 "rgba(227, 26, 28, 0.3)",
+                 "rgba(253, 191, 111, 0.3)",
+                 "rgba(255, 127, 0, 0.3)",
+                 "rgba(202, 178, 214, 0.3)"]
          }
      ]
  },
@@ -118,26 +118,26 @@ Note: emails over 50m very likely via IMAP, never sent
            "display": 0
      },
      "plugins": {
-     	"datalabels": {
-	   "align": "end",
-	   "anchor": "end"
-	}
+         "datalabels": {
+             "align": "end",
+             "anchor": "end"
+         }
      },
      "scales": {
-            "yAxes": [{
-	    	"gridLines": {
-                    "color": "rgba(0, 0, 0, 0)"
-            	},
-                "ticks": {
-                    "display": 0
-                }
-            }],
-            "xAxes": [{
-	    	"gridLines": {
-                    "color": "rgba(0, 0, 0, 0)"
-            	}
-            }]
-        }
+         "yAxes": [{
+             "gridLines": {
+                 "color": "rgba(0, 0, 0, 0)"
+             },
+             "ticks": {
+                 "display": 0
+             }
+         }],
+         "xAxes": [{
+             "gridLines": {
+                 "color": "rgba(0, 0, 0, 0)"
+             }
+         }]
+     }
  }
 }
 -->
@@ -154,15 +154,15 @@ Note: emails over 50m very likely via IMAP, never sent
      "datasets": [
          {
              "data": [28, 20, 15, 13, 8, 5, 3, 2, 1],
-             "backgroundColor": [ 
-	     	"rgba(186, 186, 186, 0.2)",
-	     	"rgba(186, 186, 186, 0.2)",
-	     	"rgba(186, 186, 186, 0.2)",
-	        "rgba(51, 160, 44, 0.6)",
-	        "rgba(251, 154, 153, 0.6)",
-	     	"rgba(186, 186, 186, 0.2)",
-	     	"rgba(186, 186, 186, 0.2)",
-	     	"rgba(186, 186, 186, 0.2)"]
+             "backgroundColor": [
+                 "rgba(186, 186, 186, 0.2)",
+                 "rgba(186, 186, 186, 0.2)",
+                 "rgba(186, 186, 186, 0.2)",
+                 "rgba(51, 160, 44, 0.6)",
+                 "rgba(251, 154, 153, 0.6)",
+                 "rgba(186, 186, 186, 0.2)",
+                 "rgba(186, 186, 186, 0.2)",
+                 "rgba(186, 186, 186, 0.2)"]
          }
      ]
  },
@@ -173,26 +173,26 @@ Note: emails over 50m very likely via IMAP, never sent
            "display": 0
      },
      "plugins": {
-     	"datalabels": {
-	   "align": "end",
-	   "anchor": "end"
-	}
+          "datalabels": {
+              "align": "end",
+              "anchor": "end"
+          }
      },
      "scales": {
-            "yAxes": [{
-	    	"gridLines": {
-                    "color": "rgba(0, 0, 0, 0)"
-            	},
-                "ticks": {
-                    "display": 0
-                }
-            }],
-            "xAxes": [{
-	    	"gridLines": {
-                    "color": "rgba(0, 0, 0, 0)"
-            	}
-            }]
-        }
+         "yAxes": [{
+             "gridLines": {
+                 "color": "rgba(0, 0, 0, 0)"
+             },
+             "ticks": {
+                 "display": 0
+             }
+         }],
+         "xAxes": [{
+             "gridLines": {
+                 "color": "rgba(0, 0, 0, 0)"
+             }
+         }]
+     }
  }
 }
 -->
@@ -209,16 +209,16 @@ Note: emails over 50m very likely via IMAP, never sent
      "datasets": [
          {
              "data": [0.8 , 0.7 , 0.6 , 57.9 , 39.1 , 0.2 , 0.2 , 0.1, 0.1 ],
-	     "backgroundColor": [
-	     	"rgba(166, 206, 227, 0.3)",
-		"rgba(31, 120, 180, 0.3)",
-		"rgba(178, 223, 138, 0.3)",
-		"rgba(51, 160, 44, 0.3)",
-		"rgba(251, 154, 153, 0.3)",
-		"rgba(227, 26, 28, 0.3)",
-		"rgba(253, 191, 111, 0.3)",
-		"rgba(255, 127, 0, 0.3)",
-		"rgba(202, 178, 214, 0.3)"]
+             "backgroundColor": [
+                 "rgba(166, 206, 227, 0.3)",
+                 "rgba(31, 120, 180, 0.3)",
+                 "rgba(178, 223, 138, 0.3)",
+                 "rgba(51, 160, 44, 0.3)",
+                 "rgba(251, 154, 153, 0.3)",
+                 "rgba(227, 26, 28, 0.3)",
+                 "rgba(253, 191, 111, 0.3)",
+                 "rgba(255, 127, 0, 0.3)",
+                 "rgba(202, 178, 214, 0.3)"]
          }
      ]
  },
@@ -237,26 +237,26 @@ Note: emails over 50m very likely via IMAP, never sent
             }
      },
      "plugins": {
-     	"datalabels": {
-	   "align": "end",
-	   "anchor": "end"
-	}
+         "datalabels": {
+             "align": "end",
+             "anchor": "end"
+         }
      },
      "scales": {
-            "yAxes": [{
-	    	"gridLines": {
-                    "color": "rgba(0, 0, 0, 0)"
-            	},
-                "ticks": {
-                    "display": 0
-                }
-            }],
-            "xAxes": [{
-	    	"gridLines": {
-                    "color": "rgba(0, 0, 0, 0)"
-            	}
-            }]
-        }
+         "yAxes": [{
+             "gridLines": {
+                 "color": "rgba(0, 0, 0, 0)"
+             },
+             "ticks": {
+                 "display": 0
+             }
+         }],
+         "xAxes": [{
+             "gridLines": {
+                 "color": "rgba(0, 0, 0, 0)"
+             }
+         }]
+     }
  }
 }
 -->
@@ -272,17 +272,17 @@ Note: emails over 50m very likely via IMAP, never sent
      "labels": ["max (TOTAL/WRITE/READ)", "avg (TOTAL/WRITE/READ)"],
      "datasets": [{
              "data": [835000, 390000],
-	     "backgroundColor": [ "rgba(166, 206, 227, 0.3)",
-	     			  "rgba(166, 206, 227, 0.3)" ]
+             "backgroundColor": [ "rgba(166, 206, 227, 0.3)",
+                                  "rgba(166, 206, 227, 0.3)" ]
          }, {
              "data": [108000, 50000],
-	     "backgroundColor": ["rgba(31, 120, 180, 0.3)",
-	                         "rgba(31, 120, 180, 0.3)" ]
+             "backgroundColor": ["rgba(31, 120, 180, 0.3)",
+                                 "rgba(31, 120, 180, 0.3)" ]
          }, {
              "data": [66000, 31000],
-	     "backgroundColor": ["rgba(202, 178, 214, 0.3)",
-	                         "rgba(202, 178, 214, 0.3)" ]
-	 }
+             "backgroundColor": ["rgba(202, 178, 214, 0.3)",
+                                 "rgba(202, 178, 214, 0.3)" ]
+         }
      ]
  },
  "options": {
@@ -292,40 +292,40 @@ Note: emails over 50m very likely via IMAP, never sent
            "display": 0
      },
      "layout": {
-            "padding": {
-                "left": 0,
-                "right": 0,
-                "top": 10,
-                "bottom": 0
-            }
+         "padding": {
+             "left": 0,
+             "right": 0,
+             "top": 10,
+             "bottom": 0
+         }
      },
      "plugins": {
-     	"datalabels": {
-	   "align": "end",
-	   "anchor": "end"
-	}
+         "datalabels": {
+             "align": "end",
+             "anchor": "end"
+         }
      },
      "scales": {
-            "yAxes": [{
-	    	"gridLines": {
-                    "color": "rgba(0, 0, 0, 0)"
-            	},
-                "ticks": {
-                    "display": 0
-                }
-            }],
-            "xAxes": [{
-	    	"gridLines": {
-                    "color": "rgba(0, 0, 0, 0)"
-            	}
-            }]
-        }
+         "yAxes": [{
+             "gridLines": {
+                 "color": "rgba(0, 0, 0, 0)"
+             },
+             "ticks": {
+                 "display": 0
+             }
+         }],
+         "xAxes": [{
+             "gridLines": {
+                 "color": "rgba(0, 0, 0, 0)"
+             }
+         }]
+    }
  }
 }
 -->
 </canvas>
 
-Note: 
+Note:
 - TODO fix colors
 
 
