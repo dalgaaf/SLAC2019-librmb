@@ -52,9 +52,10 @@ Note:
 
 
 <!-- .slide: data-state="normal" id="placement-1" data-timing="20s" data-menu-title="Data safety" -->
-## Requirements
+## Requirements for Production
 
 * Lost of customer data __MUST__ be prevented at any cost
+* At least replica 3 or comparable
 
 * Failure scenarios to be covered:
   * 1 of 3 fire compartments (FCs)
