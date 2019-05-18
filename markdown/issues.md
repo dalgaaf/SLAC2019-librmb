@@ -167,26 +167,59 @@ Note:
 ## Findings - Performance
 
 ### CephFS performance
-* way too slow with EC
-* find with 2m files need: 
 
-### Troubleshooting
+* imaptest performance way too slow with EC
+  * metadata/indexes on local HDD significant faster
+
+* find with 3m files need:
+  * 16 sec
+  * second run not faster
+
+* no significant load on OSDs/MDS or the cluster
+  * no error messages
+
+
+<!-- .slide: data-state="normal" id="findings-2" data-timing="20s" data-menu-title="Findings - Performance" -->
+## Findings - Performance
+
+### CephFS Troubleshooting
+* no obvious issues in network
+* multi-active MDS
+  * no relevant improvement
 * too low number of PGs by default
   * increased, no improvement
 * MDS Cache sizes increased
   * no significant improvement!
 * cephfs_metadata pool set from 6x to 3x
   * no significant improvement!
-* no obvious issues in network
+
+Note: 
+- next steps: move to replication
 
 
 <!-- .slide: data-state="normal" id="findings-2" data-timing="20s" data-menu-title="Findings - Performance" -->
 ## Findings - Operations
 
-TODO: issues with installation, e.g. encryption, .... fixed in SES6
+* encryption didn't work out-of-the-box with SES5.5
+  * not all OSDs detected on boot due to timeout
+  * fixed for SES6, workaround till then
+
+* wipefs didn't fully work
+  * reboot required
+
+Note: 
+* wipefs: assume labels still somewhere in cache, may needed udev handling?
 
 
 <!-- .slide: data-state="normal" id="findings-10" data-timing="20s" data-menu-title="Conclusion" -->
 ## Learnings
 
-TODO: PPL, PPL, PPL
+### The technical part works and will be fixed!
+
+### Project success depends on 3 components:
+* People
+* People
+* People
+
+### You need motivated developers, operators and backing from management!
+
