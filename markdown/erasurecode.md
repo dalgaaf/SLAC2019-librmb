@@ -5,17 +5,17 @@
 <!-- .slide: data-state="normal" id="EC-0" data-timing="20s" data-menu-title="Replication vs EC" -->
 ## Options
 
-* Replication
-  * copy each object n-times
-  * at least 200% overhead (3x)
-  * fast read
-  * quicker recovery
+* Replication <!-- .element: class="fragment" data-fragment-index="0" -->
+  * copy each object n-times <!-- .element: class="fragment" data-fragment-index="0" -->
+  * at least 200% overhead (3x) <!-- .element: class="fragment" data-fragment-index="0" -->
+  * fast read <!-- .element: class="fragment" data-fragment-index="0" -->
+  * quicker recovery <!-- .element: class="fragment" data-fragment-index="0" -->
 
-* Erasure Coding (EC)
-  * one copy plus parity
-  * space effective
-  * performance impact on small objects
-  * expensive recovery
+* Erasure Coding (EC) <!-- .element: class="fragment" data-fragment-index="1" -->
+  * one copy plus parity <!-- .element: class="fragment" data-fragment-index="1" -->
+  * space effective <!-- .element: class="fragment" data-fragment-index="1" -->
+  * performance impact on small objects <!-- .element: class="fragment" data-fragment-index="1" -->
+  * expensive recovery <!-- .element: class="fragment" data-fragment-index="1" -->
 
 Note: 
 - read on replication faster due to fact that k objects need to read (latency, CPU)
@@ -362,15 +362,18 @@ Note:
 <!-- .slide: data-state="normal" id="EC-9" data-timing="20s" data-menu-title="Cluster settings" -->
 ## Settings
 
-### Rados
-* Testing: k3m7
-* PoC: k4m5
+### Rados <!-- .element: class="fragment" data-fragment-index="0" -->
+* Testing: k3m7 <!-- .element: class="fragment" data-fragment-index="0" -->
+* PoC: k4m5 <!-- .element: class="fragment" data-fragment-index="0" -->
 
-### CephFS
-* data: k2m4
-* meta_data: 6x replication
-* Ops may need to intervene
-* Cluster able to run recovery
+### CephFS <!-- .element: class="fragment" data-fragment-index="1" -->
+* data: k2m4 <!-- .element: class="fragment" data-fragment-index="1" -->
+* meta_data: 6x replication <!-- .element: class="fragment" data-fragment-index="1" -->
+* Ops may need to intervene <!-- .element: class="fragment" data-fragment-index="1" -->
+* Cluster able to run recovery <!-- .element: class="fragment" data-fragment-index="1" -->
+
+### Production <!-- .element: class="fragment" data-fragment-index="2" -->
+* EC/Replication need to change again <!-- .element: class="fragment" data-fragment-index="2" -->
 
 Note:
 - Rados settings: comparable regarding chunks written, PoC less overhead

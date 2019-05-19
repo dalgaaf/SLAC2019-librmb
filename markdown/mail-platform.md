@@ -340,22 +340,7 @@ Note:
 - Emails are written once, read many ; 
 - lost/damage of metadata/indexes need reconstruction of user mailboxes, may be possible, but no folders and info about e.g read/forward/replied
 - deduplication can be a legal decision, DT doesn't do it atm.
-
-
-<!-- .slide: data-state="normal" id="store-emails" data-timing="20s" data-menu-title="How stored?" -->
-## Storage
-
-* load pattern depends on: <!-- .element class="fragment" data-fragment-index="0"-->
-  * protocol (IMAP vs POP3) <!-- .element class="fragment" data-fragment-index="0"-->
-  * user frontend (mailer vs webmailer) <!-- .element class="fragment" data-fragment-index="0"-->
-  * mail server implementation <!-- .element class="fragment" data-fragment-index="0"-->
-
-* storage type depends on: <!-- .element class="fragment" data-fragment-index="1"-->
-  * sync between workers <!-- .element class="fragment" data-fragment-index="1"-->
-  * plugins <!-- .element class="fragment" data-fragment-index="1"-->
-  * snapshots <!-- .element class="fragment" data-fragment-index="1"-->
-
-Note: TODO: refine
+- load depends on: protocol (IMAP vs POP3), user frontend (mailer vs webmailer)
 
 
 <!-- .slide: data-state="normal" id="project-motivation" data-timing="20s" data-menu-title="Project Motivation" -->
