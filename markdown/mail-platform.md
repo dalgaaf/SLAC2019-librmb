@@ -325,9 +325,6 @@ Note: emails over 50m very likely via IMAP, never sent
 -->
 </canvas>
 
-Note:
-- TODO fix colors
-
 
 <!-- .slide: data-state="normal" id="store-emails" data-timing="20s" data-menu-title="How stored?" -->
 ## How are emails stored?
