@@ -276,12 +276,12 @@ Note: emails over 50m very likely via IMAP, never sent
                                   "rgba(166, 206, 227, 0.3)" ]
          }, {
              "data": [108000, 50000],
-             "backgroundColor": ["rgba(31, 120, 180, 0.3)",
-                                 "rgba(31, 120, 180, 0.3)" ]
+             "backgroundColor": ["rgba(51, 160, 44, 0.3)",
+                                 "rgba(51, 160, 44, 0.3)" ]
          }, {
              "data": [66000, 31000],
-             "backgroundColor": ["rgba(202, 178, 214, 0.3)",
-                                 "rgba(202, 178, 214, 0.3)" ]
+             "backgroundColor": ["rgba(251, 154, 153, 0.3)",
+                                 "rgba(251, 154, 153, 0.3)" ]
          }
      ]
  },
