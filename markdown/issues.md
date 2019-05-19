@@ -179,7 +179,7 @@ Note:
   * no error messages
 
 
-<!-- .slide: data-state="normal" id="findings-2" data-timing="20s" data-menu-title="Findings - Performance" -->
+<!-- .slide: data-state="normal" id="findings-3" data-timing="20s" data-menu-title="Findings - Performance" -->
 ## Findings - Performance
 
 ### CephFS Troubleshooting
@@ -197,7 +197,7 @@ Note:
 - next steps: move to replication
 
 
-<!-- .slide: data-state="normal" id="findings-2" data-timing="20s" data-menu-title="Findings - Performance" -->
+<!-- .slide: data-state="normal" id="findings-4" data-timing="20s" data-menu-title="Findings - Performance" -->
 ## Findings - Operations
 
 * encryption didn't work out-of-the-box with SES5.5
@@ -211,15 +211,84 @@ Note:
 * wipefs: assume labels still somewhere in cache, may needed udev handling?
 
 
+<!-- .slide: data-state="normal" id="findings-5" data-timing="20s" data-menu-title="Findings - Performance" -->
+## Findings - Operations
+
+* Which EC profile is assigned to a pool?
+
+```bash
+$> ceph osd pool ls detail | grep cephfs_data
+pool 6 'cephfs_data' erasure size 6 min_size 3 crush_rule 1 \
+    		     object_hash rjenkins pg_num 2048 \
+		     pgp_num 2048 last_change 8199 lfor 0/4568 \
+		     flags hashpspool,ec_overwrites,nodeep-scrub \
+		     stripe_width 8192 application cephfs
+```
+
+
+<!-- .slide: data-state="normal" id="findings-6" data-timing="20s" data-menu-title="Findings - Performance" -->
+## Findings - Operations
+
+* Which EC profile is assigned to a pool?
+
+```bash
+$> ceph osd pool ls detail | grep cephfs_data
+pool 6 'cephfs_data' erasure size 6 min_size 3 crush_rule 1 \
+    		     object_hash rjenkins pg_num 2048 \
+		     pgp_num 2048 last_change 8199 lfor 0/4568 \
+		     flags hashpspool,ec_overwrites,nodeep-scrub \
+		     stripe_width 8192 application cephfs
+```
+
+```bash
+$> ceph osd dump | grep cephfs_data
+pool 6 'cephfs_data' erasure size 6 min_size 3 crush_rule 1 \
+    		     object_hash rjenkins pg_num 2048 \
+		     pgp_num 2048 last_change 8199 lfor 0/4568 \
+		     flags hashpspool,ec_overwrites,nodeep-scrub \
+		     stripe_width 8192 application cephfs
+```
+
+
+<!-- .slide: data-state="normal" id="findings-6" data-timing="20s" data-menu-title="Findings - Performance" -->
+## Findings - Operations
+
+* Which EC profile is assigned to a pool?
+
+```bash
+$> ceph osd pool ls detail -f json-pretty
+[
+    {
+        "pool_name": "cephfs_data",
+[...]
+        "erasure_code_profile": "ec-fast-k2m4",
+[...]
+```
+```bash
+$> ceph osd erasure-code-profile get ec-fast-k2m4 
+
+crush-device-class=ssd
+crush-failure-domain=host
+crush-root=default
+jerasure-per-chunk-alignment=false
+k=2
+m=4
+plugin=jerasure
+technique=reed_sol_van
+w=8
+```
+
+
 <!-- .slide: data-state="normal" id="findings-10" data-timing="20s" data-menu-title="Conclusion" -->
 ## Learnings
 
-### The technical part works and will be fixed!
+### The technical part works! <!-- .element: class="fragment" data-fragment-index="0" -->
+### Performance issues will be indentified and fixed! <!-- .element: class="fragment" data-fragment-index="1" -->
 
-### Project success depends on 3 components:
-* People
-* People
-* People
+### Project success depends on 3 components <!-- .element: class="fragment" data-fragment-index="2" -->
+* People <!-- .element: class="fragment" data-fragment-index="3" -->
+* People <!-- .element: class="fragment" data-fragment-index="4" -->
+* People <!-- .element: class="fragment" data-fragment-index="5" -->
 
-### You need motivated developers, operators and backing from management!
+### You need motivated Dev/Ops! <!-- .element: class="fragment" data-fragment-index="6" -->
 
