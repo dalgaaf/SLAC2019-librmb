@@ -95,6 +95,29 @@ MAILBOX: M(mailbox_guid)=ad54230e65b49a59381100009c60b9f7
 NOTE: alternative - "rados -p rados_mail --all ls"; "for i in `rados -p rados_mail -N $N ls`; do rados -p rados_mail -N $N stat $i >> stats; done ; sort -k3,3 -k4,4 -n stats ; rm stats" ; "rados -p rados_mail get -N $N $Object_id test; cat test" ; "for i in `rados -p rados_mail listxattr -N $N $Object_id`; do echo -n $i: ; rados -p rados_mail getxattr -N $N $Object_id $i; echo "" ; done"
 
 
+ <!-- .slide: data-state="normal" id="librmb-DT-2.31" data-timing="20s" data-menu-title="CephFS structure" -->
+ ## CephFS structure
+
+```bash
+ ./06/0ad/20[..]589
+ ./06/0ad/20[..]589/metadata.sqlite
+ ./06/0ad/20[..]589/quota.dict
+ ./06/0ad/20[..]589/dovecot-acl-list
+ ./06/0ad/20[..]589/dovecot-uidvalidity.5cc6da8b
+ ./06/0ad/20[..]589/dovecot-uidvalidity
+ ./06/0ad/20[..]589/mailboxes
+ ./06/0ad/20[..]589/mailboxes/INBOX
+ ./06/0ad/20[..]589/mailboxes/INBOX/rbox-Mails
+ ./06/0ad/20[..]589/mailboxes/INBOX/rbox-Mails/dovecot.index.log.2
+ ./06/0ad/20[..]589/mailboxes/INBOX/rbox-Mails/dovecot.index.cache
+ ./06/0ad/20[..]589/mailboxes/INBOX/rbox-Mails/dovecot.index.search.uids
+ ./06/0ad/20[..]589/mailboxes/INBOX/rbox-Mails/dovecot.index.log
+ ./06/0ad/20[..]589/mailboxes/INBOX/rbox-Mails/dovecot.index
+ ./06/0ad/20[..]589/mailboxes/INBOX/rbox-Mails/dovecot.index.search
+ ./06/0ad/20[..]589/mailboxes/INBOX/rbox-Mails/dovecot.index.backup
+```
+
+
 <!-- .slide: data-state="normal" id="librmb-DT-2.4" data-timing="20s" data-menu-title="rados-dict" -->
 ## RADOS Dictionary Plugin
 
