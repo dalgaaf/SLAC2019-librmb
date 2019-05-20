@@ -23,16 +23,16 @@
 <!-- .slide: data-state="normal" id="status-2" data-timing="20s" data-menu-title="PoC" -->
 ## Proof-of-Concept
 
-* run load tests
-  * full synthetic
-  * customer-like patterns
-* run failure scenarios against Ceph
-  * all HW failures
-  * load impact
-  * Recovery
-  * operational procedures
-* improve and fine-tune Ceph setup
-* verify and optimize hardware
+* <!-- .element: class="fragment" data-fragment-index="1" --> run load tests
+  * <!-- .element: class="fragment" data-fragment-index="1" --> full synthetic
+  * <!-- .element: class="fragment" data-fragment-index="1" --> customer-like patterns
+* <!-- .element: class="fragment" data-fragment-index="2" --> run failure scenarios against Ceph
+  * <!-- .element: class="fragment" data-fragment-index="2" --> all HW failures
+  * <!-- .element: class="fragment" data-fragment-index="2" --> load impact
+  * <!-- .element: class="fragment" data-fragment-index="2" --> recovery
+  * <!-- .element: class="fragment" data-fragment-index="2" --> operational procedures
+* <!-- .element: class="fragment" data-fragment-index="3" --> improve and fine-tune Ceph setup
+* <!-- .element: class="fragment" data-fragment-index="4" --> verify and optimize hardware
 
 
 <!-- .slide: data-state="normal" id="status-4" data-timing="20s" data-menu-title="Next Steps" -->

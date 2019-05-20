@@ -166,32 +166,32 @@ Note:
 <!-- .slide: data-state="normal" id="findings-2" data-timing="20s" data-menu-title="Findings - Performance" -->
 ## Findings - Performance
 
-### CephFS performance
+### CephFS performance <!-- .element: class="fragment" data-fragment-index="0" -->
 
-* imaptest performance way too slow with EC
-  * metadata/indexes on local HDD significant faster
+* imaptest performance way too slow with EC <!-- .element: class="fragment" data-fragment-index="1" -->
+  * metadata/indexes on local HDD significant faster <!-- .element: class="fragment" data-fragment-index="1" -->
 
-* find with 3m files need:
-  * 16 sec
-  * second run not faster
+* find with 3m files need: <!-- .element: class="fragment" data-fragment-index="2" -->
+  * 16 sec <!-- .element: class="fragment" data-fragment-index="2" -->
+  * second run not faster <!-- .element: class="fragment" data-fragment-index="2" -->
 
-* no significant load on OSDs/MDS or the cluster
-  * no error messages
+* no significant load on OSDs/MDS or the cluster <!-- .element: class="fragment" data-fragment-index="3" -->
+  * no error messages <!-- .element: class="fragment" data-fragment-index="3" -->
 
 
 <!-- .slide: data-state="normal" id="findings-3" data-timing="20s" data-menu-title="Findings - Performance" -->
 ## Findings - Performance
 
-### CephFS Troubleshooting
-* no obvious issues in network
-* multi-active MDS
-  * no relevant improvement
-* too low number of PGs by default
-  * increased, no improvement
-* MDS Cache sizes increased
-  * no significant improvement!
-* cephfs_metadata pool set from 6x to 3x
-  * no significant improvement!
+### CephFS Troubleshooting <!-- .element: class="fragment" data-fragment-index="0" -->
+* no obvious issues in network <!-- .element: class="fragment" data-fragment-index="1" -->
+* multi-active MDS <!-- .element: class="fragment" data-fragment-index="2" -->
+  * no relevant improvement <!-- .element: class="fragment" data-fragment-index="2" -->
+* too low number of PGs by default <!-- .element: class="fragment" data-fragment-index="3" -->
+  * increased, no improvement <!-- .element: class="fragment" data-fragment-index="3" -->
+* MDS Cache sizes increased <!-- .element: class="fragment" data-fragment-index="4" -->
+  * no significant improvement! <!-- .element: class="fragment" data-fragment-index="4" -->
+* cephfs_metadata pool set from 6x to 3x <!-- .element: class="fragment" data-fragment-index="5" -->
+  * no significant improvement! <!-- .element: class="fragment" data-fragment-index="5" -->
 
 Note: 
 - next steps: move to replication
@@ -200,12 +200,12 @@ Note:
 <!-- .slide: data-state="normal" id="findings-4" data-timing="20s" data-menu-title="Findings - Performance" -->
 ## Findings - Operations
 
-* encryption didn't work out-of-the-box with SES5.5
-  * not all OSDs detected on boot due to timeout
-  * fixed for SES6, workaround till then
+* encryption didn't work out-of-the-box with SES5.5 <!-- .element: class="fragment" data-fragment-index="0" -->
+  * not all OSDs detected on boot due to timeout <!-- .element: class="fragment" data-fragment-index="1" -->
+  * fixed for SES6, workaround till then <!-- .element: class="fragment" data-fragment-index="1" -->
 
-* wipefs didn't fully work
-  * reboot required
+* wipefs didn't fully work <!-- .element: class="fragment" data-fragment-index="2" -->
+  * reboot required <!-- .element: class="fragment" data-fragment-index="2" -->
 
 Note: 
 * wipefs: assume labels still somewhere in cache, may needed udev handling?
