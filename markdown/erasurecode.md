@@ -299,12 +299,12 @@ Note:
 <!--
 {
  "data" : {
-     "labels": ["6x", "8x", "9x", "k2m4", "k3m6", "k3m7", "k4m5", "k4m8", "k6m6"],
+     "labels": ["NFS", "6x", "8x", "9x", "k2m4", "k3m6", "k3m7", "k4m5", "k4m8", "k6m6"],
      "datasets": [
          {
              "label": "Space Overhead",
              "yAxesGroup": "space",
-             "data": [500, 700, 800, 200, 200, 233, 125, 200, 100],
+             "data": [138, 500, 700, 800, 200, 200, 233, 125, 200, 100],
              "backgroundColor": [
                  "rgba(166, 206, 227, 0.3)",
                  "rgba(31, 120, 180, 0.3)",
