@@ -1,13 +1,10 @@
 <!-- .slide: data-state="cover" id="cover-page" data-timing="20" -->
 <br>
-Cephalocon - Barcelona 2019
+SLAC 2019 - Berlin
 <br>
 <br>
 <br>
-```bash
- echo “Subject: Update on librmb” | \
-      sendmail -v SDS@ceph.com
-```
+## librmb: Dovecot Mailstorage in Ceph
 <br>
 <br>
 <br>
