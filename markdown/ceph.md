@@ -2,93 +2,136 @@
 # Ceph
 
 
-<!-- .slide: data-state="normal" id="ceph-store-emails-2" data-timing="20s" data-menu-title="Ceph: Option CephFS" -->
-## Where to store in Ceph?
+<!-- .slide: data-state="normal" id="ceph-0" data-timing="20s" data-menu-title="Ceph: Overview" -->
+## What is Ceph?
 
-<div>
-    <img style="width: 35%; left: 55%; position: absolute" alt="CephFS"
-         data-src="images/cephfs.svg" />
-</div>
-
-### CephFS
-
-* POSIX layer adds complexity <!-- .element class="fragment" -->
-* suffers from similar issues as NFS <!-- .element class="fragment" -->
-* no significant advantage for mail storage <!-- .element class="fragment" -->
-* usable for metadata/caches/indexes <!-- .element class="fragment" -->
-<br>
-<br>
-
-### Security <!-- .element class="fragment" -->
-* requires direct access to storage network <!-- .element class="fragment" -->
-* only for dedicated platform <!-- .element class="fragment" -->
+* Unified distributed storage system for
+  * file
+  * block
+  * object
+* Storage platform
+* Software defined storage (SDS)
+* The future of storage
+* The Linux of storage
 
 Note:
-- there is no significant advantage to NFS especially with cost and effort to switch from well working systems.
+- Slides inspired by Sage's keynote at Cephalocon
 
 
-<!-- .slide: data-state="normal" id="ceph-store-emails-3" data-timing="20s" data-menu-title="Ceph: Option RBD" -->
-## Where to store in Ceph?
-
+<!-- .slide: data-state="normal" id="ceph-0" data-timing="20s" data-menu-title="Ceph: Overview" -->
 <div>
-    <img style="width: 35%; left: 55%; position: absolute" alt="RBD"
-         data-src="images/rbd.svg" />
+	<center><img src="images/ceph-stack.svg" style="width:90%"></center>
 </div>
 
-### RBD
 
-* sharding and large RBDs <!-- .element class="fragment" -->
-  * account migration <!-- .element class="fragment" -->
-  * RBD/fs extend scenarios <!-- .element class="fragment" -->
-* still includes POSIX layer like NFS <!-- .element class="fragment" -->
-* no sharing between clients <!-- .element class="fragment" -->
-* impracticable <!-- .element class="fragment" -->
-<br>
-<br>
+<!-- .slide: data-state="normal" id="ceph-0" data-timing="20s" data-menu-title="Ceph: Overview" -->
+## Why is Ceph?
 
-### Security <!-- .element class="fragment" -->
-* no direct access to storage network required <!-- .element class="fragment" -->
-* secure through hypervisor abstraction (libvirt) <!-- .element class="fragment" -->
+### Free and Open Source software
+* Freedom to use
+* Freedom from vendor lock-in
+* Freedom to change and innovate
+* Freedom to share
 
 
-<!-- .slide: data-state="normal" id="ceph-store-emails-4" data-timing="20s" data-menu-title="Ceph: Option RadosGW" -->
-## Where to store in Ceph?
+<!-- .slide: data-state="normal" id="ceph-0" data-timing="20s" data-menu-title="Ceph: Overview" -->
+## Why is Ceph?
 
+### Reliable and durable storage 
+* build out of unreliable components
+* No single point of failure
+* Replication and erasure coding
+* self-monitoring and self-managed
+* automated re-balance, recovery, and backfill
+
+### Consitency and correctness over performance
+
+
+<!-- .slide: data-state="normal" id="ceph-0" data-timing="20s" data-menu-title="Ceph: Overview" -->
+## Why is Ceph?
+
+### Scalability
+* Elastic infrastructure
+  * from 10s to 10.000s of nodes
+  * grow and shrink
+  * add and remove hardware
+  * rolling update/upgrade
+  * all while cluster is online and in use
+* Scale-up
+* Scale-out
+* Multi-cluster federation across sites
+
+Note:
+- scale-up: bigger/faster HW
+- scale-out: within a single cluster or site
+- Failure is not the exception, but the norm
+
+
+<!-- .slide: data-state="normal" id="ceph-1" data-timing="20s" data-menu-title="Ceph: CRUSH" -->
+## Components
+
+### MON
+* lightweight daemon
+* paxos protocol, odd number
+* maintains maps of the cluster state
+* authentication (CephX)
+
+### OSD
+* smart storage daemon, coordinates with peers
+* handles data replication, recovery, backfilling, and rebalancing
+* BlueStore
+  * utilize the raw storage device
+  * Object data, RocksDB (kv-store), Write-ahead log of RocksDB
+
+Note:
+- MON: cluster membership, mon-map, osd-map, PG-map, CRUSH-map
+- OSD: usually one OSD per physical storage device (sometimes e.g. 2 OSDs per NVMe)
+
+
+<!-- .slide: data-state="normal" id="ceph-1" data-timing="20s" data-menu-title="Ceph: CRUSH" -->
+## Components
+
+### MDS
+* metadata for posix-compliant shared filesystem (CephFS)
+  * directory hierachy
+  * file metadata
+* multi-MDS support
+* multi-active, standby, standby-replay, hot-standby
+* coordinate access
+
+### Clients
+* authenticate with MONs
+* talk directly to OSDs
+
+Note:
+
+
+<!-- .slide: data-state="normal" id="ceph-1" data-timing="20s" data-menu-title="Ceph: CRUSH" -->
+## CRUSH
 <div>
-    <img style="width: 35%; left: 55%; position: absolute" alt="RGW"
-         data-src="images/rgw.svg" />
+	<center><img src="images/crush.svg" style="width:35%"></center>
 </div>
 
-### RadosGW
-* store emails as objects <!-- .element class="fragment" -->
-* additional server/service <!-- .element class="fragment" --> 
-* extra network hops <!-- .element class="fragment" -->
-* potential bottleneck <!-- .element class="fragment" -->
-* very likely not fast enough <!-- .element class="fragment" -->
-<br>
-<br>
-
-#### <b>Security</b> <!-- .element class="fragment" -->
-* no direct access to Ceph storage network required <!-- .element class="fragment" -->
-* connection to RadosGW can be secured (WAF) <!-- .element class="fragment" -->
+Note:
+- Controlled Replication Under Scalable Hashing
+- uniform, weighted distribution
+- fast O(log n) calculation, no lists or tables, no lookups
+- stable, predictable, bounded migration on changes
 
 
-<!-- .slide: data-state="normal" id="ceph-store-emails-5" data-timing="20s" data-menu-title="Ceph: Option librados" -->
-## Where to store in Ceph?
+<!-- .slide: data-state="normal" id="ceph-1" data-timing="20s" data-menu-title="Ceph: CRUSH" -->
+## What else?
 
-<div>
-    <img style="width: 35%; left: 55%; position: absolute" alt="librados"
-         data-src="images/librados.svg" />
-</div>
+* Pools
+  * independent cluster namespaces
+  * subset of the cluster
+  * resilence configured on pool level
+  * CRUSH ruleset
+  * access control
 
-### Librados
-* direct access to RADOS <!-- .element class="fragment" -->
-* parallel I/O <!-- .element class="fragment" -->
-* not optimized for email use case<!-- .element class="fragment" -->
-* how to handle metadata/caches/indexes? <!-- .element class="fragment" -->
-<br>
-<br>
+* PGs
+  * namespaces or object collections
+  * handle data placement based on PGs instead of each object
+  * base for CRUSH calculations
+  * base for handling recovery
 
-#### <b>Security</b> <!-- .element class="fragment" -->
-* requires direct access to storage network <!-- .element class="fragment" -->
-* only for dedicated platform <!-- .element class="fragment" -->
