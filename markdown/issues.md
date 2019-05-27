@@ -183,6 +183,7 @@ Note:
 ## Findings - Performance
 
 ### CephFS Troubleshooting <!-- .element: class="fragment" data-fragment-index="0" -->
+* issue is no general issue, it's an issue in this cluster! <!-- .element: class="fragment" data-fragment-index="0" -->
 * no obvious issues in network <!-- .element: class="fragment" data-fragment-index="1" -->
 * multi-active MDS <!-- .element: class="fragment" data-fragment-index="2" -->
   * no relevant improvement <!-- .element: class="fragment" data-fragment-index="2" -->
@@ -195,6 +196,34 @@ Note:
 
 Note: 
 - next steps: move to replication
+
+
+<!-- .slide: data-state="normal" id="findings-3.1" data-timing="20s" data-menu-title="Findings - Performance" -->
+## Findings - Recovery Performance
+
+### Drawbacks of billions of emails ???
+
+* Recovery/Backfill <!-- .element: class="fragment" data-fragment-index="0" -->
+  * 1200 OSDs would have at least 32k PGs <!-- .element: class="fragment" data-fragment-index="1" -->
+  * k4m5 cause 9 chunks per object <!-- .element: class="fragment" data-fragment-index="2" -->
+  * 7 billion emails lead to 63 billion objects, ~2m objects per PG <!-- .element: class="fragment" data-fragment-index="3" -->
+  * Recovery is object based, big impact on HDDs <!-- .element: class="fragment" data-fragment-index="4" -->
+  * Cluster with 100 OSDs, 40m emails <!-- .element: class="fragment" data-fragment-index="5" -->
+    * failure of 1 OSD requires ~4m objects to be moved <!-- .element: class="fragment" data-fragment-index="5" -->
+
+
+<!-- .slide: data-state="normal" id="findings-3.2" data-timing="20s" data-menu-title="Findings - Performance" -->
+## Findings - Recovery Performance
+
+### Alternatives
+
+* Move from HDD to SSD depending on TCO impact. <!-- .element: class="fragment" data-fragment-index="0" -->
+
+* Base code on dbox like format ? <!-- .element: class="fragment" data-fragment-index="1" -->
+  * impact due to EC rewrite performance <!-- .element: class="fragment" data-fragment-index="2" -->
+  * may add SSD pool to store boxes till full <!-- .element: class="fragment" data-fragment-index="3" -->
+    * when dbox full, write to HDD <!-- .element: class="fragment" data-fragment-index="3" -->
+    * if dbox not full, move after defined time to HDD <!-- .element: class="fragment" data-fragment-index="3" -->
 
 
 <!-- .slide: data-state="normal" id="findings-4" data-timing="20s" data-menu-title="Findings - Performance" -->
@@ -282,7 +311,7 @@ w=8
 <!-- .slide: data-state="normal" id="findings-10" data-timing="20s" data-menu-title="Conclusion" -->
 ## Learnings
 
-### The technical part works! <!-- .element: class="fragment" data-fragment-index="0" -->
+### The technical part works in general! <!-- .element: class="fragment" data-fragment-index="0" -->
 ### Performance issues will be indentified and fixed! <!-- .element: class="fragment" data-fragment-index="1" -->
 
 ### Project success depends on 3 components <!-- .element: class="fragment" data-fragment-index="2" -->
