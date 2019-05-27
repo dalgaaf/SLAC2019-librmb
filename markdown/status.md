@@ -15,6 +15,11 @@
 
 * <!-- .element: class="fragment" data-fragment-index="5" --> fixed issues on the way
 
+* <!-- .element: class="fragment" data-fragment-index="5" --> adapted imaptest version available
+
+Note:
+- adapted imaptest to cover some testcases which are used in our setup
+
 
 <!-- .slide: data-state="normal" id="status-1.1" data-timing="20s" data-menu-title="Test Mailbox" -->
 <center><img src="images/mailbox_telekom_email_sec.png"></center>
