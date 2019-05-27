@@ -2,7 +2,7 @@
 # Ceph
 
 
-<!-- .slide: data-state="normal" id="ceph-0" data-timing="20s" data-menu-title="Ceph: Overview" -->
+<!-- .slide: data-state="normal" id="ceph-0" data-timing="20s" data-menu-title="Ceph: What" -->
 ## What is Ceph?
 
 * Unified distributed storage system for
@@ -18,13 +18,13 @@ Note:
 - Slides inspired by Sage's keynote at Cephalocon
 
 
-<!-- .slide: data-state="normal" id="ceph-0" data-timing="20s" data-menu-title="Ceph: Overview" -->
+<!-- .slide: data-state="normal" id="ceph-1" data-timing="20s" data-menu-title="Ceph: Overview" -->
 <div>
 	<center><img src="images/ceph-stack.svg" style="width:90%"></center>
 </div>
 
 
-<!-- .slide: data-state="normal" id="ceph-0" data-timing="20s" data-menu-title="Ceph: Overview" -->
+<!-- .slide: data-state="normal" id="ceph-2" data-timing="20s" data-menu-title="Ceph: Why" -->
 ## Why is Ceph?
 
 ### Free and Open Source software
@@ -34,7 +34,7 @@ Note:
 * Freedom to share
 
 
-<!-- .slide: data-state="normal" id="ceph-0" data-timing="20s" data-menu-title="Ceph: Overview" -->
+<!-- .slide: data-state="normal" id="ceph-3" data-timing="20s" data-menu-title="Ceph: Reliability" -->
 ## Why is Ceph?
 
 ### Reliable and durable storage 
@@ -47,7 +47,7 @@ Note:
 ### Consitency and correctness over performance
 
 
-<!-- .slide: data-state="normal" id="ceph-0" data-timing="20s" data-menu-title="Ceph: Overview" -->
+<!-- .slide: data-state="normal" id="ceph-4" data-timing="20s" data-menu-title="Ceph: Scalability" -->
 ## Why is Ceph?
 
 ### Scalability
@@ -67,7 +67,7 @@ Note:
 - Failure is not the exception, but the norm
 
 
-<!-- .slide: data-state="normal" id="ceph-1" data-timing="20s" data-menu-title="Ceph: CRUSH" -->
+<!-- .slide: data-state="normal" id="ceph-5" data-timing="20s" data-menu-title="Ceph: Components" -->
 ## Components
 
 ### MON
@@ -88,7 +88,7 @@ Note:
 - OSD: usually one OSD per physical storage device (sometimes e.g. 2 OSDs per NVMe)
 
 
-<!-- .slide: data-state="normal" id="ceph-1" data-timing="20s" data-menu-title="Ceph: CRUSH" -->
+<!-- .slide: data-state="normal" id="ceph-6" data-timing="20s" data-menu-title="Ceph: Components" -->
 ## Components
 
 ### MDS
@@ -106,8 +106,8 @@ Note:
 Note:
 
 
-<!-- .slide: data-state="normal" id="ceph-1" data-timing="20s" data-menu-title="Ceph: CRUSH" -->
-## CRUSH
+<!-- .slide: data-state="normal" id="ceph-7" data-timing="20s" data-menu-title="Ceph: CRUSH" -->
+## CRUSH ???
 <div>
 	<center><img src="images/crush.svg" style="width:35%"></center>
 </div>
@@ -119,7 +119,7 @@ Note:
 - stable, predictable, bounded migration on changes
 
 
-<!-- .slide: data-state="normal" id="ceph-1" data-timing="20s" data-menu-title="Ceph: CRUSH" -->
+<!-- .slide: data-state="normal" id="ceph-8" data-timing="20s" data-menu-title="Ceph: Pools, PGs" -->
 ## What else?
 
 * Pools

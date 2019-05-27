@@ -2,7 +2,7 @@
 # Ceph and Mails
 
 
-<!-- .slide: data-state="normal" id="ceph-store-emails-2" data-timing="20s" data-menu-title="Ceph: Option CephFS" -->
+<!-- .slide: data-state="normal" id="ceph-store-emails-0" data-timing="20s" data-menu-title="Ceph: Option CephFS" -->
 ## Where to store emails in Ceph?
 
 <div>
@@ -27,7 +27,7 @@ Note:
 - there is no significant advantage to NFS especially with cost and effort to switch from well working systems.
 
 
-<!-- .slide: data-state="normal" id="ceph-store-emails-3" data-timing="20s" data-menu-title="Ceph: Option RBD" -->
+<!-- .slide: data-state="normal" id="ceph-store-emails-1" data-timing="20s" data-menu-title="Ceph: Option RBD" -->
 ## Where to store emails in Ceph?
 
 <div>
@@ -51,7 +51,7 @@ Note:
 * secure through hypervisor abstraction (libvirt) <!-- .element class="fragment" -->
 
 
-<!-- .slide: data-state="normal" id="ceph-store-emails-4" data-timing="20s" data-menu-title="Ceph: Option RadosGW" -->
+<!-- .slide: data-state="normal" id="ceph-store-emails-2" data-timing="20s" data-menu-title="Ceph: Option RadosGW" -->
 ## Where to store emails in Ceph?
 
 <div>
@@ -73,7 +73,7 @@ Note:
 * connection to RadosGW can be secured (WAF) <!-- .element class="fragment" -->
 
 
-<!-- .slide: data-state="normal" id="ceph-store-emails-5" data-timing="20s" data-menu-title="Ceph: Option librados" -->
+<!-- .slide: data-state="normal" id="ceph-store-emails-3" data-timing="20s" data-menu-title="Ceph: Option librados" -->
 ## Where to store emails in Ceph?
 
 <div>
@@ -92,3 +92,4 @@ Note:
 #### <b>Security</b> <!-- .element class="fragment" -->
 * requires direct access to storage network <!-- .element class="fragment" -->
 * only for dedicated platform <!-- .element class="fragment" -->
+
