@@ -9,7 +9,7 @@
           data-src="images/HPE-DL380Gen9.jpg" />
 </div>
 
-* <!-- .element: class="fragment" data-fragment-index="1" --> HPE ProLiant DL380 Gen10
+* <!-- .element: class="fragment" data-fragment-index="1" --> HPE ProLiant DL380 Gen9/10
 * <!-- .element: class="fragment" data-fragment-index="1" --> 2x Dual-port 10G, SSD for boot, HBA only
 
 ### CephFS Nodes (MDS, OSDs) <!-- .element: class="fragment" data-fragment-index="2" -->

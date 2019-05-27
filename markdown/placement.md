@@ -37,6 +37,7 @@ Note:
 - cluster gets extended 18 HDD nodes on 3 FCs
 - for better distribution, especially for EC
 
+
 <!-- .slide: data-state="normal" id="placement-net-2" data-timing="20s" data-menu-title="Network Overview" -->
 <div>
   <center><img data-src="images/network-infra-mailplatform_v1.svg" style="width:85%"></center>

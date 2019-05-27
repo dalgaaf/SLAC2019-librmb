@@ -26,6 +26,10 @@ Note:
 
 <!-- Slide -->
 ##### Email Size Distribution
+
+
+<!-- Slide -->
+##### Email Size Distribution
 <canvas data-chart="bar">
 <!--
 {

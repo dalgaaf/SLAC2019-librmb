@@ -21,10 +21,19 @@ Note:
 - read on replication faster due to fact that k objects need to read (latency, CPU)
 
 
-<!-- .slide: data-state="normal" id="EC-0" data-timing="20s" data-menu-title="Erasure Coding Diagram" -->
+<!-- .slide: data-state="normal" id="EC-0.1" data-timing="20s" data-menu-title="Replication Diagram" -->
+### Replication
+<div>
+  <center><img data-src="images/replica_explained.svg" style="width:30%"></center>
+</div>
+
+Note:
+
+
+<!-- .slide: data-state="normal" id="EC-0.2" data-timing="20s" data-menu-title="Erasure Coding Diagram" -->
 ### Erasure Coding
 <div>
-  <center><img data-src="images/ec_explained.svg" style="width:65%"></center>
+  <center><img data-src="images/ec_explained_extra.svg" style="width:65%"></center>
 </div>
 
 Note:
