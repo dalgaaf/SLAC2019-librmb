@@ -170,6 +170,7 @@ NOTE: alternative - "rados -p rados_mail --all ls"; "for i in `rados -p rados_ma
 
 ### Enterprise currently products used: <!-- .element: class="fragment" data-fragment-index="6" -->
 * <!-- .element: class="fragment" data-fragment-index="6" --> SES 5.5, SLES 12-SP3
+* <!-- .element: class="fragment" data-fragment-index="7" --> Target: SES 6, SLES 15
 
 Note:
 - Target for PoC is SES 6 based on Nautilus
