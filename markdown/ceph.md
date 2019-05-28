@@ -44,7 +44,7 @@ Note:
 * self-monitoring and self-managed <!-- .element class="fragment" -->
 * automated re-balance, recovery, and backfill <!-- .element class="fragment" -->
 
-### Consitency and correctness over performance <!-- .element class="fragment" -->
+### Consistency and correctness over performance <!-- .element class="fragment" -->
 
 
 <!-- .slide: data-state="normal" id="ceph-4" data-timing="20s" data-menu-title="Ceph: Scalability" -->
